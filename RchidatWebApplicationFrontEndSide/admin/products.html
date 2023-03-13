@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>administration</title>
+   
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/alertify.core.css">
+   <link rel="stylesheet" href="../css/alertify.default.css">
+
+
+
+   <link rel="stylesheet" href="../css/admin.css">
+   <!--    -->
+</head>
+
+<body>
+
+   <header class="header">
+
+      <section class="flex">
+
+         <a href="../index.htmll" class="logo">R'chidat.</a>
+
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <a href="#" class="btn">Mon profil</a>
+            <a href="#" class="btn">Se déconnecter</a>
+         </div>
+
+      </section>
+
+   </header>
+
+   <div class="side-bar">
+
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+
+      <div class="app-icon">
+         <img src="../images/logo.jpg" class="image" alt="">
+      </div>
+
+      <nav class="navbar">
+         <a class="sidebarsection" href="catalogs.html"><i class="fas fa-object-group"></i><span>Catégories</span></a>
+         <a class="sidebarsection active" href="products.html"><i
+               class="fas fa-shopping-bag"></i><span>Produits</span></a>
+         <a class="sidebarsection" href="users.html"><i class="fas fa-users"></i><span>Utilisateurs</span></a>
+         <a class="sidebarsection" href="commands.html"><i class="fas fa-cart-shopping"></i><span>Commandes</span></a>
+         <a class="sidebarsection" href="comments.html"><i class="fas fa-comment"></i><span>Commentaires</span></a>
+         <a class="sidebarsection" href="statistiques.html"><i
+               class="fas fa-area-chart"></i><span>Statistiques</span></a>
+         <a class="sidebarsection" href="../index.html"><i class="fas fa-home"></i><span>Accueil</span></a>
+      </nav>
+
+   </div>
+
+   <section class="main-content">
+
+      <h1 class="heading">Gestion des produits 
+         <!-- <a id="MenuFrmArticle" class="inline-add-btn pos"><i
+               class="fa fa-add"></i> Ajouter un produit</a> -->
+            </h1>
+               <div class="table-container">
+      
+                  <div id="table-box-left" class="table-box-left">
+                     <table class="table">
+                        <!--  table-striped -->
+                        <thead>
+                           <tr>
+                              <th>Num</th>
+                              <th>Catégories</th>
+                           </tr>
+                        </thead>
+                        <tbody id="table-left-body">
+                           
+                        </tbody>
+                     </table>
+                  </div>
+            
+                  <div id="table-box-right" class="table-box-right">
+                     <h2 class="table-heading">Catégorie :<span id="heading-content" class="heading-content"></span></h2>
+                     <h1 class="table-heading">List des produits <a id="MenuFrmArticle" class="inline-add-btn pos"><i class="fa fa-add"></i> Ajouter un produit</a></h1>
+                     <table class="table">
+                        <!--  table-striped -->
+                        <thead>
+                           <tr>
+                              <th>Désignation</th>
+                              <th>prix</th>
+                              <th>Quantité</th>
+                              <th>Expire le</th>
+                              <th>Etat</th>
+                              <th>Action</th>
+                           </tr>
+                        </thead>
+                        <tbody id="table-right-body">
+                           
+                        </tbody>
+                     </table>
+                  </div>
+            
+               </div>
+     
+
+   </section>
+
+   <!--Modal-->
+   <div class="modal fade bd-exemple-modal-lg" id="modal-add-update-article" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+      <div class="modal-dialog">
+         <!--  modal-lg -->
+         <div class="modal-content">
+            <div class="modal-header">
+               <h4 class="modal-title fs-5 text-primary"></h4>
+               <button type="button" class="btn-close close-modal-article" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+            </div>
+            <form id="frmArticle" name="frmArticle">
+               <div class="modal-body">
+                  <input type="text" class="form-control" id="IdArticle" hidden>
+                  <input type="text" class="form-control" id="IdCatalog" hidden>
+                  <div class="mb-3">
+                     <label for="Designation" class="col-form-label">Désignation
+                        <span class="text-danger">*</span>
+                     </label>
+                     <input type="text" class="form-control" id="Designation">
+                  </div>
+                  <div class="mb-3">
+                     <label for="Description" class="col-form-label">Description<span class="text-danger">*</span></label>
+                     <input type="text" class="form-control" id="Description">
+                  </div>
+                  <div class="d-flex">
+                     <div class="mb-3 flex-fill">
+                        <label for="Price" class="col-form-label">Prix<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="Price">
+                     </div>
+                     <div class="mb-3 flex-fill ms-3">
+                        <label for="LastPrice" class="col-form-label">Ancien prix<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="LastPrice">
+                     </div>
+                  </div>
+                  <div class="d-flex">
+                     <div class="mb-3 flex-fill">
+                        <label for="MinStock" class="col-form-label">Min-Stock<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="MinStock">   
+                     </div>
+                     <div class="mb-3 flex-fill ms-3">
+                        <label for="MaxStock" class="col-form-label">Max-Stock<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="MaxStock">
+                     </div>
+                  </div>
+                  
+                  <div class="d-flex">
+                     <div class="mb-3 flex-fill">
+                        <label for="Quantity" class="col-form-label">Quantité<span class="text-danger">*</span></label>
+                     <input type="text" class="form-control" id="Quantity">
+                     </div>
+                     <div class="mb-3 flex-fill ms-3">
+                        <label for="ReductionRate" class="col-form-label">Taux de reduction<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="ReductionRate">
+                     </div>
+                  </div>
+                  <div class="mb-3">
+                     <label for="ExpireDate" class="col-form-label">Expire le<span class="text-danger">*</span></label>
+                     <input type="text" class="form-control" id="ExpireDate">
+                  </div>
+                  <div class="mb-3">
+                     <label for="ImageArticle" class="col-form-label">Image<span class="text-danger">*</span></label>
+                     <input type="text" class="form-control" id="ImageArticle">
+                  </div>
+                  <div class="mb-3">
+                     <label for="State" class="col-form-label">Etat
+                         <span class="text-danger">*</span>
+                     </label>
+                     <select id="State" name="State" class="form-control">
+                        <option value="1">Activée</option>
+                        <option value="0">Désactivée</option>
+                     </select>
+                     <!-- <input type=""  > -->
+                 </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="inline-delete-btn btn-sm close-modal-article" data-bs-dismiss="modal"><i
+                        class="fa fa-times"></i> Annuler</button>
+                  <button type="submit" id="submitArticle" class="inline-option-btn btn-sm"><i class="fa fa-check"></i>
+                     Enregister</button>
+               </div>
+            </form>
+
+         </div>
+      </div>
+   </div>
+
+   <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+   Launch demo modal
+ </button> -->
+ 
+ <!-- Modal -->
+ <div class="modal fade" id="showArticleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered">
+     <div class="modal-content">
+       <div class="modal-header">
+         <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div id="showArticleModalContent" class="modal-body">
+       </div>
+       <!-- <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary">Save changes</button>
+       </div> -->
+     </div>
+   </div>
+ </div>
+ 
+
+
+   <footer class="footer">
+
+      created by <span> CTO R'chidat web designers </span> | all rights reserved
+
+   </footer>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+
+
+   <!-- custom js file link  -->
+   <script src="../js/Utilities/alertify.min.js"></script>
+   <script src="../js/DTO/articleDTO.js"></script>
+   <script src="../js/DTO/catalogDTO.js"></script>
+   <script src="../js/Utilities/utilities.js"></script>
+   <script src="../js/Services/catalogServices.js"></script>
+   <script src="../js/Services/articleServices.js"></script>
+   <script src="../js/products.js"></script>
+   <script src="../js/admin.js"></script>
+
+
+</body>
+
+</html>

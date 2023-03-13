@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Fontawesome css link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/alertify.core.css">
+    <link rel="stylesheet" href="css/alertify.default.css">
+
+    <!--style css file-->
+    <link rel="stylesheet" href="css/LoginSignup.css">
+    <title>S'inscrire</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <form id="frmSignup" name="frmSignup">
+            <h1 class="heading">S'inscrire</h1>
+            <p class="text">Avez-vous déjà un compte ? <a href="login.html">Connectez-vous</a></p>
+            <div class="message-error" id="message-error"></div>
+                <div class="input-box">
+                    <label for="FirstName">Prénom<span>*</span></label>
+                    <input class="input" type="text" name="FirstName" id="FirstName" placeholder="Entrez votre prénom"/>
+                </div>
+                <div class="input-box">
+                    <label for="LastName">Nom<span>*</span></label>
+                    <input class="input" type="text" name="LastName" id="LastName" placeholder="Entrez votre nom"/>
+                </div> 
+                <div class="input-box">
+                    <label for="Eamil">Email<span>*</span></label>
+                    <input class="input" type="email" name="Email" id="Email" placeholder="Entrez votre email"/>
+                </div>
+                
+                <!-- <div class="input-box">
+                    <label for="gender">Sexe<span>*</span></label> -->
+                    <!-- <select name="gender" id="gender">
+                        <option>Femme</option>
+                        <option>Homme</option>
+                    </select> -->
+                    <!-- <div>
+                        <label for="gender">Femme</label>
+                        <input type="radio" name="gender" value="Femme"/>
+                        <label for="gender">Homme</label>
+                        <input type="radio" name="gender" value="Homme"/>
+                    </div> -->
+                    
+                <!-- </div> -->
+                <div class="input-box">
+                    <label for="Phone">Téléphone<span>*</span></label>
+                    <input class="input" type="tel" name="Phone" id="Phone" placeholder="Entrez votre numéro"/>
+                </div>
+                <div class="input-box">
+                    <label for="Password">Mot de passe<span>*</span></label>
+                    <input class="input" type="password" name="Password" id="Password" placeholder="Entrez votre mot de passe"/>
+                </div> 
+                <div class="input-box">
+                    <label for="CPassword">Confirmation<span>*</span></label>
+                    <input class="input" type="password" name="CPassword" id="CPassword" placeholder="Confirmez votre mot de passe"/>
+                </div>   
+                <!-- <input type="text" class="form-control" value="" id="IdUser" hidden>
+                <input type="text" class="form-control" value="" id="Gender" hidden>
+                <input type="text" class="form-control" value="" id="City" hidden>
+                <input type="text" class="form-control" value="" id="Country" hidden>
+                <input type="text" class="form-control" value="" id="FullAddress" hidden>    
+                <input type="text" class="form-control" value="" id="Role" hidden>
+                <input type="text" class="form-control" value="" id="CreatedAt" hidden>
+                <input type="text" class="form-control" value="" id="ModifiedAt" hidden>
+                <input type="text" class="form-control"  value=""id="ImageUser" hidden> -->
+            <button type="submit" class="c-btn" id="signupSubmit">S'inscrire</button>
+        </form>
+    </div>
+    <!--Boostrap script js link-->
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--Boostrap Alertify script js file-->
+    <script type="text/javascript" src="js/Utilities/alertify.min.js"></script>
+
+
+   <!--DTO js file-->
+   <script type="text/javascript" src="js/DTO/userDTO.js"></script>
+   <!--Utilities js file-->
+   <script type="text/javascript" src="js/Utilities/utilities.js"></script>
+    <!--Services js file-->
+    <script type="text/javascript" src="js/Services/userSignupServices.js"></script>
+
+
+    <!--script js file-->
+    <script type="text/javascript" src="js/signup.js"></script>
+</body>
+</html>

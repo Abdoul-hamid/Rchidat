@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform:initial;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 52.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:#eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: #ffffff;
+    padding: 2rem;
+    border: solid .2rem var(--black);
+    border-radius: .5rem;
+    max-width: 60rem;
+    text-align: center;
+    margin: 2rem;
+}
+.heading{
+    color: var(--black);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.c-btn{
+    padding: 1rem 3rem;
+    background-color: #eee;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.message-error{
+    padding: 1rem 3rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #dc3545;
+    border-radius: .5rem;
+    display: none;
+}
+.c-btn:hover{
+    background-color: var(--orange);
+    color:#fff;
+    letter-spacing: .2rem;
+    border: none;
+}
+.input-box{
+    display: block;
+    text-align: start;
+}
+.input-box label{
+    text-align: start;
+    color: var(--black);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.input-box .input{
+    padding: 1rem .5rem;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: #eee;
+    border-radius: .5rem;
+}
+.input-box .input:focus{
+    border: solid .1rem var(--orange);
+}
+.container form .text{
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.input-box select{
+    font-size: 2rem;
+    background-color: #eee;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    padding: .8rem .5rem;
+}
+.container form .text a{
+    color: var(--orange);
+}
+.container form .text a:hover{
+    letter-spacing: .1rem;
+}
+div + p{
+    text-align: end;
+    margin-top: 1rem;
+}
+label span{
+    color: red;
+}
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    /* html{
+        font-size: 50%;
+    }  
+    .container{
+        max-width: 55rem;
+    } */
+
+}
+
+@media (max-width:850px){
+
+    /* .container{
+        max-width: 50rem;
+    } */
+
+}
+
+@media (max-width:450px){
+
+    /* html{
+        font-size: 40%;
+    }
+    .container{
+        max-width: 50rem;
+    } */
+    /* body{
+        overflow: hidden;
+    } */
+
+}

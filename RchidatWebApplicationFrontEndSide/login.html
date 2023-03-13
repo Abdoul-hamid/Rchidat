@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap css link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Fontawesome css link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/alertify.core.css">
+    <link rel="stylesheet" href="css/alertify.default.css">
+
+    <!--style css file-->
+    <link rel="stylesheet" href="css/LoginSignup.css">
+    <title>Connection</title>
+</head>
+<body>
+    <div class="container">
+        <form id="frmLogin" name="frmLogin">
+            <h1 class="heading">Connexion</h1>
+            <p class="text">Vous n'avez pas de compte ? <a href="signup.html">créez-en un</a></p>
+            <div class="message-error" id="message-error"></div>
+                <div class="input-box">
+                    <label for="eamil">Email<span>*</span></label>
+                    <input class="input" type="email" name="email" id="email" placeholder="Entrez votre email"/>
+                </div>
+                <div class="input-box">
+                    <label for="password">Mot de passe<span>*</span></label>
+                    <input class="input" type="password" name="password" id="password" placeholder="Entrez votre mot de passe"/>
+                </div>
+                  
+
+                <!-- <input type="text" class="form-control" id="FirstName" hidden>
+                <input type="text" class="form-control" id="LastName" hidden>
+                <input type="text" class="form-control" id="Phone" hidden>
+                <input type="text" class="form-control" id="IdUser" hidden>
+                <input type="text" class="form-control" id="Gender" hidden>
+                <input type="text" class="form-control" id="City" hidden>
+                <input type="text" class="form-control" id="Country" hidden>
+                <input type="text" class="form-control" id="FullAddress" hidden>    
+                <input type="text" class="form-control" id="Role" hidden>
+                <input type="text" class="form-control" id="CreatedAt" hidden>
+                <input type="text" class="form-control" id="ModifiedAt" hidden>
+                <input type="text" class="form-control" id="ImageUser" hidden> -->
+                <p class="text">vous avez oublié votre <a href="">mot de passe?</a></p>         
+            <button type="submit" class="c-btn" id="loginSubmit">Se connecter</button>
+        </form>
+        
+    </div>
+    <!--Boostrap script js link-->
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!--script js file-->
+    <script type="text/javascript" src="js/Utilities/alertify.min.js"></script>
+    
+ 
+    <!--DTO js file-->
+    <script type="text/javascript" src="js/DTO/userLoginDTO.js"></script>
+   <!--Utilities js file-->
+   <script type="text/javascript" src="js/Utilities/utilities.js"></script>
+    <!--Services js file-->
+    <script type="text/javascript" src="js/Services/userLoginServices.js"></script>
+
+
+    <!--script js file-->
+    <script type="text/javascript" src="js/login.js"></script>
+    
+</body>
+</html>
